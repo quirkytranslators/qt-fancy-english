@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Talk Fancy: Turn Plain Words Into Grand Ones</title>
+<meta name="description" content="Turn plain words into grand ones with a small rule-based fancy English taster.">
+<style>
+body { font-family: Georgia, serif; max-width: 720px; margin: 0 auto; padding: 24px; line-height: 1.7; color: #222; }
+h1, h2 { font-family: Verdana, sans-serif; line-height: 1.3; }
+h1 { font-size: 1.9rem; }
+h2 { font-size: 1.3rem; margin-top: 2rem; }
+.toolbox { border: 2px solid #6C5CE7; border-radius: 12px; padding: 20px; margin: 20px 0; background: #f7f5ff; }
+textarea { width: 100%; min-height: 110px; font-size: 1rem; padding: 10px; box-sizing: border-box; }
+.output { border: 1px solid #999; border-radius: 8px; padding: 12px; min-height: 80px; background: #fff; margin-top: 12px; }
+button { font-size: 1rem; padding: 10px 18px; margin-top: 10px; cursor: pointer; background: #6C5CE7; color: #fff; border: none; border-radius: 8px; }
+button.secondary { background: #555; margin-left: 8px; }
+.example { border-left: 4px solid #6C5CE7; padding: 8px 14px; margin: 14px 0; background: #fafafa; }
+.example p { margin: 4px 0; }
+</style>
+</head>
+<body>
+<h1>Talk Fancy: Turn Plain Words Into Grand Ones</h1>
+<img src="fancy-english-tool.jpg" alt="Quill, ink and classic books for fancy English writing" style="max-width:100%;border-radius:12px;">
+
+<p>Fancy English is plain English dressed for a formal room. It swaps short everyday words for longer Latinate ones, drops contractions, and keeps the tone calm and polite. Try it with the <a href="https://quirkytranslators.com/formal-english/fancy-english-translator/">free fancy English translator</a> when you want a full version, or play with the small taster below first.</p>
+
+<p>You do not need a large vocabulary to sound polished. A few steady swaps do most of the work.</p>
+
+<p>Ask becomes inquire. Buy becomes purchase. Get becomes obtain. Once you learn a handful of these pairs, formal writing starts to feel natural.</p>
+
+<h2>When fancy English helps</h2>
+
+<p>Formal words suit job letters, polite requests, and speeches. They signal care and respect for the reader. They also slow a reader down in a good way, since each word carries a little more weight.</p>
+
+<p>Fancy words suit some moments and not others. A text to a close friend can sound odd in grand words. A note to a hiring manager or a teacher can gain from them. Match the words to the moment and the reader.</p>
+
+<h2>Try the mini tool</h2>
+
+<p>Type a plain sentence in the box below. Press the button. The tool swaps words from its list, expands contractions, and shows a fancier version at once.</p>
+
+<div class="toolbox">
+<label for="plainInput">Your plain sentence</label>
+<textarea id="plainInput" placeholder="Type a plain sentence here.">I want to buy a new house.</textarea>
+<div>
+<input type="checkbox" id="politeBox">
+<label for="politeBox">Add polite framing</label>
+</div>
+<button id="fancyBtn" type="button">Make It Fancy</button>
+<button id="copyBtn" class="secondary" type="button">Copy result</button>
+<div class="output" id="fancyOutput" aria-live="polite"></div>
+</div>
+
+<p>This mini tool is a small rule-based taster. It follows a fixed word list, so it cannot judge tone or context the way a person can. For a full version that handles real sentences with care, use the <a href="https://quirkytranslators.com/formal-english/fancy-english-translator/">Fancy English Translator</a>.</p>
+
+<h2>How it works</h2>
+
+<p>The tool works in three small steps. First, it expands contractions. Second, it swaps each plain word for a fancier match. Third, it keeps your capital letters and punctuation in place.</p>
+
+<ul>
+<li>Contractions expand first. Cannot replaces can't, and I am replaces I'm.</li>
+<li>Word swaps come next. The tool checks each word against a list of more than 30 pairs.</li>
+<li>Polite framing is optional. Tick the box and the tool adds a courteous opener and closer.</li>
+</ul>
+
+<h2>Worked examples</h2>
+
+<p>The five examples below come straight from the tool above. Each plain sentence went through the same word list you just used. No example was edited by hand after the tool ran.</p>
+
+<div class="example">
+<p>Plain: I want to buy a new house.</p>
+<p>Fancy: I desire to purchase a novel residence.</p>
+</div>
+
+<div class="example">
+<p>Plain: She wants to talk with her old friend.</p>
+<p>Fancy: She desires to converse with her venerable companion.</p>
+</div>
+
+<div class="example">
+<p>Plain: I can't get good food.</p>
+<p>Fancy: I cannot obtain excellent fare.</p>
+</div>
+
+<div class="example">
+<p>Plain: We will show the new house and buy good food.</p>
+<p>Fancy: We will demonstrate the novel residence and purchase excellent fare.</p>
+</div>
+
+<div class="example">
+<p>Plain: Start the new job now.</p>
+<p>Fancy: Commence the novel vocation now.</p>
+</div>
+
+<p>With polite framing ticked, the first sentence becomes a touch more formal. It gains a courteous opener and closer around the same upgraded words.</p>
+
+<div class="example">
+<p>Plain: I want to buy a new house.</p>
+<p>Fancy: I hope you will find the following agreeable. I desire to purchase a novel residence. Thank you for your kind attention.</p>
+</div>
+
+<h2>Where to go next</h2>
+
+<p>A word list can only take you so far. Real fancy English also needs sentence rhythm, word choice for the occasion, and a sense of who will read it. That is where a full tool earns its place.</p>
+
+<p>If you want your whole message lifted to a formal register, try the <a href="https://quirkytranslators.com/formal-english/formal-english-translator/">Formal English Translator</a> as well. It pairs well with the fancy style when a letter or request needs a formal tone.</p>
+
+<p>Keep the mini tool bookmarked for quick play. Use it to learn the swaps, then test your own sentences and see how far a few grand words can carry a plain thought.</p>
+
+<script>
+var WORD_MAP = {
+  ask: "inquire", buy: "purchase", get: "obtain", help: "assist",
+  show: "demonstrate", end: "conclude", start: "commence", need: "require",
+  want: "desire", talk: "converse", big: "grand", small: "modest",
+  happy: "delighted", sad: "melancholy", good: "excellent", bad: "unfortunate",
+  fast: "swift", slow: "leisurely", easy: "effortless", hard: "arduous",
+  smart: "astute", funny: "amusing", rich: "affluent", poor: "impoverished",
+  old: "venerable", new: "novel", job: "vocation", house: "residence",
+  friend: "companion", money: "funds", car: "automobile", food: "fare",
+  eat: "dine", drink: "beverage", look: "observe", say: "declare",
+  tell: "inform", give: "bestow", take: "acquire", make: "fashion",
+  use: "employ", try: "endeavor", think: "ponder", know: "comprehend",
+  see: "perceive", walk: "stroll", run: "hasten", love: "adore",
+  problem: "dilemma",
+  wants: "desires", needs: "requires", buys: "purchases", gets: "obtains",
+  shows: "demonstrates", starts: "commences", ends: "concludes",
+  talks: "converses", helps: "assists"
+};
+var CONTRACTIONS = {
+  "can't": "cannot", "won't": "will not", "don't": "do not",
+  "didn't": "did not", "isn't": "is not", "aren't": "are not",
+  "wasn't": "was not", "weren't": "were not", "couldn't": "could not",
+  "shouldn't": "should not", "wouldn't": "would not", "hasn't": "has not",
+  "haven't": "have not", "doesn't": "does not",
+  "I'm": "I am", "I'll": "I will", "I've": "I have", "I'd": "I would",
+  "you're": "you are", "you'll": "you will", "you've": "you have",
+  "he's": "he is", "she's": "she is", "it's": "it is",
+  "that's": "that is", "there's": "there is", "let's": "let us",
+  "we're": "we are", "we'll": "we will", "we've": "we have",
+  "they're": "they are", "they'll": "they will"
+};
+function capMatch(word, replacement) {
+  if (word.length > 1 && word === word.toUpperCase()) {
+    return replacement.toUpperCase();
+  }
+  if (word.charAt(0) === word.charAt(0).toUpperCase()) {
+    return replacement.charAt(0).toUpperCase() + replacement.slice(1);
+  }
+  return replacement;
+}
+function upgradeText(text, polite) {
+  var out = text;
+  var cKeys = Object.keys(CONTRACTIONS).sort(function (a, b) { return b.length - a.length; });
+  cKeys.forEach(function (k) {
+    var re = new RegExp("\\b" + k + "\\b", "gi");
+    out = out.replace(re, function (m) { return capMatch(m, CONTRACTIONS[k]); });
+  });
+  var wKeys = Object.keys(WORD_MAP).sort(function (a, b) { return b.length - a.length; });
+  wKeys.forEach(function (k) {
+    var re = new RegExp("\\b" + k + "\\b", "gi");
+    out = out.replace(re, function (m) { return capMatch(m, WORD_MAP[k]); });
+  });
+  if (polite) {
+    out = "I hope you will find the following agreeable. " + out + " Thank you for your kind attention.";
+  }
+  return out;
+}
+if (typeof document !== "undefined") {
+  document.getElementById("fancyBtn").addEventListener("click", function () {
+    var input = document.getElementById("plainInput").value;
+    var polite = document.getElementById("politeBox").checked;
+    document.getElementById("fancyOutput").textContent = upgradeText(input, polite);
+  });
+  document.getElementById("copyBtn").addEventListener("click", function () {
+    var text = document.getElementById("fancyOutput").textContent;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text);
+    }
+  });
+  document.getElementById("fancyOutput").textContent = upgradeText(
+    document.getElementById("plainInput").value, false
+  );
+}
+</script>
+</body>
+</html>
